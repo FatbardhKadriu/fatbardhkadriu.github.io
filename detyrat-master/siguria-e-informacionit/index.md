@@ -1,3 +1,9 @@
+---
+title: Siguria e informacionit
+layout: default
+noslides: true
+suppresshooks: true
+---
 
 ## Detyra
 

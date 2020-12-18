@@ -1,3 +1,10 @@
+---
+title: Analiza e veglës Metasploit
+layout: default
+noslides: true
+suppresshooks: true
+---
+
 # Analiza e veglës Metasploit
 
 Ky punim është kryer në kuadër të detyrës së dytë në lëndën "Siguria e Informacionit" dhe shembujt e implementuar janë përdorur vetëm për qëllime edukative. Zhvillimi i shembujve të tillë pa dijeninë dhe miratimin e personave të përfshirë si viktima konsiderohet jolegale.

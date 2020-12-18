@@ -1,5 +1,5 @@
 ---
-title: Dashboard
+title: Ballina
 layout: default
 noslides: true
 suppresshooks: true
@@ -11,8 +11,8 @@ suppresshooks: true
 
 ### Detyrat në lëndët në master
 
-- [Siguria e informacionit](/Master-assignments/sigura-e-informacionit)
-- [Algoritmet e avancuara](/Master-assignments/algoritmet-e-avancuara)
+- [Siguria e informacionit](/detyrat-master/siguria-e-informacionit)
+- [Algoritmet e avancuara](/detyrat-master/algoritmet-e-avancuara)
 
 
 ### Projekte në bachelor
