@@ -11,7 +11,7 @@ suppresshooks: true
 
 ### Assignments on Master
 
-- [Information Security](/Master-assignments/Information-security)
+- [Information Security](/Master-assignments/Information-Security)
 - [Advanced Algorithms](/Master-assignments/Advanced-Algorithms)
 
 
