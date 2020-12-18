@@ -5,23 +5,23 @@ noslides: true
 suppresshooks: true
 ---
 
-### Bachelor thesis
+### Tema e diplomës
 
-- [Sentiment analysis per texts in Albanian tongue](https://github.com/FatbardhKadriu/Sentiment-analysis-per-texts-in-Albanian-tongue)
+- [Analiza e sentimentit përmes të mësuarit të thellë në tekstet në gjuhën shqipe](https://github.com/FatbardhKadriu/Sentiment-analysis-per-texts-in-Albanian-tongue)
 
-### Assignments on Master
+### Detyrat në lëndët në master
 
-- [Information Security](/Master-assignments/Information-Security)
-- [Advanced Algorithms](/Master-assignments/Advanced-Algorithms)
+- [Siguria e informacionit](/Master-assignments/sigura-e-informacionit)
+- [Algoritmet e avancuara](/Master-assignments/algoritmet-e-avancuara)
 
 
-### Projects in Bachelor
+### Projekte në bachelor
 
-- [Human Computer Interaction](https://github.com/FatbardhKadriu/Zhvillimi-i-Sistemit-Interaktiv-per-llogaritjen-e-statistikave-te-notave-ne-arsimin-e-mesem)
+- [Komunikimi Njeri Kompjuter](https://github.com/FatbardhKadriu/Zhvillimi-i-Sistemit-Interaktiv-per-llogaritjen-e-statistikave-te-notave-ne-arsimin-e-mesem)
 - [Mobile/Wearable Programming](https://github.com/FatbardhKadriu/Group-Expenses)
-- [Data Models and Query Languages](https://github.com/FatbardhKadriu/Modelet_e_te_dhenave)
-- [Internet Programming](https://github.com/FatbardhKadriu/Hospital-Webpage)
-- [Data Security](https://github.com/FatbardhKadriu/DS_1819_Gr3)
-- [Computer Networking](https://github.com/eduardspahija/Creating-a-Computer-Network-Packet-Tracer)
+- [Modelet e të dhënave dhe gjuhët e pyetësorëve](https://github.com/FatbardhKadriu/Modelet_e_te_dhenave)
+- [Programimi në Internet](https://github.com/FatbardhKadriu/Hospital-Webpage)
+- [Siguria e të dhënave](https://github.com/FatbardhKadriu/DS_1819_Gr3)
+- [Rrjetat kompjuterike](https://github.com/eduardspahija/Creating-a-Computer-Network-Packet-Tracer)
 - [Graphics Programming](https://github.com/FatbardhKadriu/imt2531-exam-2020)
-- [Internet](https://github.com/FatbardhKadriu/INT18_19_Gr2)
+- [Interneti](https://github.com/FatbardhKadriu/INT18_19_Gr2)
