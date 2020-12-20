@@ -3,10 +3,24 @@ title: Analiza e veglës Metasploit
 ---
 
 # Analiza e veglës Metasploit
-
+<!-- 
 | [Fatbardh Kadriu](https://github.com/FatbardhKadriu) | [Arbena Musa](https://github.com/ArbenaMusa) | [Albana Hysenaj](https://github.com/albanah) |
 | ---------------------------------------------------- | -------------------------------------------- | -------------------------------------------- |
-|                                                      |                                              |                                              |
+|                                                      |                                              |                                              | -->
+
+<table width="100%">
+<tr>
+<td width="33%">
+<b><a href="https://github.com/FatbardhKadriu">Fatbardh Kadriu</a></b>
+</td>
+<td width="33%">
+<b><a href="https://github.com/ArbenaMusa">Arbena Musa</a></b>
+</td>
+<td width="33%">
+<b><a href="https://github.com/albanah">Albana Hysenaj</a></b>
+</td>
+</tr>
+</table>
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ky punim është kryer në kuadër të detyrës së dytë në lëndën "Siguria e Informacionit" dhe shembujt e testuar janë përdorur vetëm për qëllime edukative. Zhvillimi i shembujve të tillë pa dijeninë dhe miratimin e personave të përfshirë si target konsiderohet jolegale.
 
@@ -186,7 +200,7 @@ _Gif. 5: Përdorimi i komandës `background`_ -->
 
 <center>
 <img width="100%" src="READMEresources/komandat_kryesore.gif"/>
-<figcaption><small><i>Video 5: Përdorimi i komandës <b>background</i></b></small></figcaption>
+<figcaption><small><i>Video 5: Përdorimi i komandës <b>background</b></i></small></figcaption>
 </center>
 
 ### Komandat e sistemit të fajllave
