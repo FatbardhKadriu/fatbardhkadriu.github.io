@@ -47,21 +47,21 @@ title: Analiza e veglës Metasploit
       - [shell](#shell)
       - [sysinfo](#sysinfo)
     + [Komandat e kamerës](#komandat-e-kamerës)
-      - [record_mic](#record-mic)
-      - [webcam_list](#webcam-list)
-      - [webcam_snap](#webcam-snap)
-      - [webcam_stream](#webcam-stream)
+      - [record_mic](#record_mic)
+      - [webcam_list](#webcam_list)
+      - [webcam_snap](#webcam_snap)
+      - [webcam_stream](#webcam_stream)
     + [Komandat e androidit](#komandat-e-androidit)
-      - [check_root](#check-root)
-      - [dump_calllog](#dump-calllog)
-      - [dump_contacts](#dump-contacts)
-      - [dump_sms](#dump-sms)
-      - [send_sms](#send-sms)
-      - [set_audio_mode](#set-audio-mode)
+      - [check_root](#check_root)
+      - [dump_calllog](#dump_calllog)
+      - [dump_contacts](#dump_contacts)
+      - [dump_sms](#dump_sms)
+      - [send_sms](#send_sms)
+      - [set_audio_mode](#set_audio_mode)
     + [Komandat për kontrollimin e aplikacioneve](#komandat-për-kontrollimin-e-aplikacioneve)
-      - [app_list](#app-list)
-      - [app_run](#app-run)
-      - [app_unisntall](#app-unisntall)
+      - [app_list](#app_list)
+      - [app_run](#app_run)
+      - [app_unisntall](#app_unisntall)
 
 
 ## Teknologjitë dhe pajisjet e përdorura
@@ -166,16 +166,10 @@ $ service apache2 start
 $ service apache2 status
 ```
 
-<table width="100%" border="0">
-<tr>
-<td width="50%"><img width="96%" src="resources/kalimi_i_aplikacionit1.gif"/></td>
-<td width="50%"><img width="96%" src="resources/kalimi_i_aplikacionit2.gif"/></td>
-</tr>
-<tr>
-<td><figcaption><small><i><center>Video 2: Shkarkimi i aplikacionit</center></i></small></figcaption></td>
-<td><figcaption><small><i>Video 3: Hapja e aplikacionit pas shkarkimit</i></small></figcaption></td>
-</tr>
-</table>
+<center>
+<img width="33%" src="resources/kalimi_i_aplikacionit.gif"/>
+<figcaption><small><i><center>Video 2: Shkarkimi i aplikacionit dhe hapja e tij</center></i></small></figcaption>
+</center>
 
 ### Shfrytëzimi i sistemit të targetuar
 
@@ -195,7 +189,7 @@ msf6 > exploit
 
 <center>
 <img width="100%" src="resources/exploit.gif"/>
-<figcaption><small><i>Video 4: Përdorimi i modulit <b>exploit</b></i></small></figcaption>
+<figcaption><small><i>Video 3: Përdorimi i modulit <b>exploit</b></i></small></figcaption>
 </center>
 
 ## Komandat e Meterpreter
@@ -223,7 +217,7 @@ Core Commands
 
 <center>
 <img width="100%" src="resources/komandat_kryesore.gif"/>
-<figcaption><small><i>Video 5: Përdorimi i komandës <b>background</b></i></small></figcaption>
+<figcaption><small><i>Video 4: Përdorimi i komandës <b>background</b></i></small></figcaption>
 </center>
 
 ### Komandat e sistemit të fajllave
@@ -258,7 +252,7 @@ Stdapi: File system Commands
 
 <center>
 <img width="100%" src="resources/komandat_e_fajll_sistemit.gif"/>
-<figcaption><small><i>Video 6: Përdorimi i komandave <b>cd</b>, <b>lcd</b>, <b>ls</b>, <b>lls</b>, <b>pwd</b> dhe <b>lpwd</b></i></small></figcaption>
+<figcaption><small><i>Video 5: Përdorimi i komandave <b>cd</b>, <b>lcd</b>, <b>ls</b>, <b>lls</b>, <b>pwd</b> dhe <b>lpwd</b></i></small></figcaption>
 </center>
 
 #### search
@@ -273,7 +267,7 @@ Meqë kërkimi i fajllave në tërë hapsirën memorike të sistemit të komprom
 
 <center>
 <img width="100%" src="resources/komandat_e_fajll_sistemit2.gif"/>
-<figcaption><small><i>Video 7: Përdorimi i komandës <b>search</b></i></small></figcaption>
+<figcaption><small><i>Video 6: Përdorimi i komandës <b>search</b></i></small></figcaption>
 </center>
 
 ### Komandat e rrjetit
@@ -294,7 +288,7 @@ Stdapi: Networking Commands
 
 <center>
 <img width="100%" src="resources/komandat_e_rrjetit.gif"/>
-<figcaption><small><i>Video 8: Përdorimi i komandave <b>ifconfig</b> dhe <b>ipconfig</b></i></small></figcaption>
+<figcaption><small><i>Video 7: Përdorimi i komandave <b>ifconfig</b> dhe <b>ipconfig</b></i></small></figcaption>
 </center>
 
 ### Komandat e sistemit
@@ -329,7 +323,7 @@ Stdapi: System Commands
 
 <center>
 <img width="100%" src="resources/komandat_e_sistemit.gif"/>
-<figcaption><small><i>Video 9: Përdorimi i komandave <b>getuid</b>, <b>localtime</b>, <b>shell</b> dhe <b>sysinfo</b></i></small></figcaption>
+<figcaption><small><i>Video 8: Përdorimi i komandave <b>getuid</b>, <b>localtime</b>, <b>shell</b> dhe <b>sysinfo</b></i></small></figcaption>
 </center>
 
 ### Komandat e kamerës
@@ -356,7 +350,7 @@ Stdapi: Webcam Commands
 
 <center>
 <img width="100%" src="resources/komanda_record_mic.gif"/>
-<figcaption><small><i>Video 10: Përdorimi i komandës <b>record_mic</b></i></small></figcaption>
+<figcaption><small><i>Video 9: Përdorimi i komandës <b>record_mic</b></i></small></figcaption>
 </center>
 
 #### webcam_list
@@ -371,13 +365,7 @@ Stdapi: Webcam Commands
 
 <center>
 <img width="100%" src="resources/komanda_webcam.gif"/>
-<figcaption><small><i>Video 11: Përdorimi i komandave <b>webcam_list</b> dhe <b>webcam_snap</b> duke specifikuar kamerën e pasme</i></small></figcaption>
-</center>
-<br/>
-
-<center>
-<img width="100%" src="resources/komanda_webcam2.gif"/>
-<figcaption><small><i>Video 12: Përdorimi i komandës <b>webcam_snap</b> duke specifikuar kamerën e përparme</i></small></figcaption>
+<figcaption><small><i>Video 10: Përdorimi i komandës <b>webcam_snap</b> duke specifikuar kamerën</i></small></figcaption>
 </center>
 
 #### webcam_stream
@@ -388,14 +376,10 @@ Stdapi: Webcam Commands
 
 <center>
 <img width="100%" src="resources/komanda_webcam_stream.gif"/>
-<figcaption><small><i>Video 13: Përdorimi i komandës <b>webcam_stream</b> duke specifikuar kamerën e pasme</i></small></figcaption>
+<figcaption><small><i>Video 11: Përdorimi i komandës <b>webcam_stream</b> duke specifikuar kamerën</i></small></figcaption>
 </center>
 <br/>
 
-<center>
-<img width="100%" src="resources/komanda_webcam_stream2.gif"/>
-<figcaption><small><i>Video 14: Përdorimi i komandës <b>webcam_stream</b> duke specifikuar kamerën e përparme</i></small></figcaption>
-</center>
 
 ### Komandat e androidit
 
@@ -421,10 +405,6 @@ Android Commands
 
 `dump_calllog` nxjerr listën e të gjitha telefonatave të zhvilluara nga sistemi i kompromentuar dhe e ruan atë në një tekst fajll duke specifikuar detajet e secilës thirrje.
 
-<center>
-<img width="100%" src="resources/komandat_e_androidit.gif"/>
-<figcaption><small><i>Video 15: Përdorimi i komandave <b>check_root</b> dhe <b>dump_calllog</b></i></small></figcaption>
-</center>
 
 #### dump_contacts
 
@@ -435,8 +415,8 @@ Android Commands
 `dump_sms` nxjerr listë e sms-ëve të shkëmbyer nga sistemi i kompromentuar dhe e ruan atë në një tekst fajll duke specifikuar detajet e secilit sms.
 
 <center>
-<img width="100%" src="resources/komandat_e_android2.gif"/>
-<figcaption><small><i>Video 16: Përdorimi i komandave <b>dump_contacts</b> dhe <b>dump_sms</b></i></small></figcaption>
+<img width="100%" src="resources/komandat_e_androidit.gif"/>
+<figcaption><small><i>Video 12: Përdorimi i komandave <b>check_root</b>, <b>dump_calllog</b>, <b>dump_contacts</b> dhe <b>dump_sms</b></i></small></figcaption>
 </center>
 
 #### send_sms
@@ -460,8 +440,8 @@ Android Commands
 </td>
 </tr>
 <tr>
-<td><center><figcaption><small><i>Video 17: Përdorimi i komandës <b>send_sms</b></i></small></figcaption></center></td>
-<td><figcaption><small><i>Video 18: Vëzhgimi i dërgimit të mesazhit në android</i></small></figcaption></td>
+<td><center><figcaption><small><i>Video 13: Përdorimi i komandës <b>send_sms</b></i></small></figcaption></center></td>
+<td><figcaption><small><i>Video 14: Vëzhgimi i dërgimit të mesazhit në android</i></small></figcaption></td>
 </tr>
 </table>
 
@@ -489,8 +469,8 @@ Android Commands
 </td>
 </tr>
 <tr>
-<td><center><figcaption><small><i>Video 19: Përdorimi i komandës <b>set_audio_mode</b></i></small></figcaption></center></td>
-<td><figcaption><small><i>Video 20: Vëzhgimi i ndërrimit të audio modit në android</i></small></figcaption></td>
+<td><center><figcaption><small><i>Video 15: Përdorimi i komandës <b>set_audio_mode</b></i></small></figcaption></center></td>
+<td><figcaption><small><i>Video 16: Vëzhgimi i ndërrimit të audio modit në android</i></small></figcaption></td>
 </tr>
 </table>
 
@@ -502,7 +482,7 @@ Application Controller Commands
 
     Command        Description
     -------        -----------
-    app_list       Liston t
+    app_list       List installed apps in the device
     app_run        Start Main Activty for package name
     app_uninstall  Request to uninstall application
 ```
@@ -529,8 +509,8 @@ Application Controller Commands
 </td>
 </tr>
 <tr>
-<td><center><figcaption><small><i>Video 21: Përdorimi i komandës <b>app_run</b></i></small></figcaption></center></td>
-<td><figcaption><small><i>Video 22: Vëzhgimi i hapjes së aplikacionit në android</i></small></figcaption></td>
+<td><center><figcaption><small><i>Video 17: Përdorimi i komandës <b>app_list</b> dhe <b>app_run</b></i></small></figcaption></center></td>
+<td><figcaption><small><i>Video 18: Vëzhgimi i hapjes së aplikacionit në android</i></small></figcaption></td>
 </tr>
 </table>
 
@@ -553,7 +533,7 @@ Application Controller Commands
 </td>
 </tr>
 <tr>
-<td><center><figcaption><small><i>Video 23: Përdorimi i komandës <b>app_uninstall</b></i></small></figcaption></center></td>
-<td><figcaption><small><i>Video 24: Vëzhgimi i shfaqjes së kërkesës për fshirjen e aplikacionit në android</i></small></figcaption></td>
+<td><center><figcaption><small><i>Video 19: Përdorimi i komandës <b>app_uninstall</b></i></small></figcaption></center></td>
+<td><figcaption><small><i>Video 20: Vëzhgimi i shfaqjes së kërkesës për fshirjen e aplikacionit në android</i></small></figcaption></td>
 </tr>
 </table>
