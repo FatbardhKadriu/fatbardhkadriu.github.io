@@ -167,7 +167,7 @@ $ service apache2 status
 ```
 
 <center>
-<img width="33%" src="resources/kalimi_i_aplikacionit.gif"/>
+<img width="30%" src="resources/kalimi_i_aplikacionit.gif"/>
 <figcaption><small><i><center>Video 2: Shkarkimi i aplikacionit dhe hapja e tij</center></i></small></figcaption>
 </center>
 
